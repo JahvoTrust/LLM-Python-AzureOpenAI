@@ -1,9 +1,18 @@
 
+import os
+import openai
+from langchain.llms import AzureOpenAI
+
 from dotenv import load_dotenv
 from llama_index import GPTChromaIndex, TrafilaturaWebReader
 import chromadb
 
 load_dotenv()
+# Configure OpenAI API
+openai.api_type = "azure"
+openai.api_version = "2022-12-01"
+openai.api_base = os.getenv('OPENAI_API_BASE')
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def create_embedding_store(name):
     chroma_client = chromadb.Client()
