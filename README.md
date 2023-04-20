@@ -1,4 +1,4 @@
-# LLM-Python-AzureOpenAI
+# Using LangChain with Azure OpenAI Service
 
 - 참고: https://github.com/onlyphantom/llm-python
 - 기존내용은 OpenAI를 기준으로 작성되어 있음.
